@@ -1,0 +1,45 @@
+/* box table space of top */ 
+.cardBox {
+    margin-top: 10%;
+    width: 50%; 
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    border-radius: 0px;
+    
+}
+
+/* css table*/
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 50px;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.example-form {
+    margin-top: 2%;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+}
+
+.button1 {
+    font-family: Bahnschrift;
+    font-size: 20px;
+}
+
+.title {
+    font-family: Bahnschrift;
+    font-size: 60px;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+}
+
+ /* Footer */
+ .Footer {
+    text-align: -webkit-center;
+    text-align: -moz-center;
+}
+    

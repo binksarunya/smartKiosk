@@ -1,0 +1,135 @@
+
+  h1.Title {
+    font-family: 'Kanit';
+    font-size: 30px;      
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      font-family: 'Kanit';
+  }
+  
+  .w3-row-padding img {
+      margin-bottom: 20px;
+  }
+  
+  .w3-sidebar {
+      /*width: 150px;*/
+      background: #cce6ff;
+      height: 100%;
+      width: 200px;
+      position: absolute;
+      z-index: 1;
+      overflow: auto;
+      top: 0px;
+  }
+
+  /*Disease file*/
+  .w3-jumbo {
+    font-size: 27px!important;
+    text-align: left;
+    margin-left: 25%;
+    margin-top: 6%;
+  }
+
+  .backButton {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 4%;
+    font-family: 'Kanit';
+    
+  }
+
+  .fa fa-angle-left w3-xlarge {
+    text-align: center;
+  }
+
+  
+  /* css table*/
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 55 0px;
+    
+  }
+  
+  .mat-header-cell.mat-sort-header-sorted {
+    color: black;
+  }
+  
+  /* card */
+  mat-card {
+    max-width: 60%;
+    margin: 2em auto;
+    padding: 0px;
+    /*text-align: center;*/
+    
+  }
+
+  .mat-header-cell {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Kanit';
+}
+
+/* box table space of top */ 
+.cardBox {
+  margin-top: 0.5%;
+
+}
+
+.Title {
+    margin-left: 20%;
+}
+
+/*input feild*/
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-left: 65%;
+}
+  
+.example-full-width {
+  width: 50%;
+}
+
+.table {
+  font-family: 'Kanit';
+  font-size: 20px;
+}
+
+.headTitle {
+  color: #8c8c8c;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+  font-size: 18px;
+}
+
+.textinbox {
+  text-align: -webkit-center;
+  text-align: -moz-center;
+}
+
+.cardBoxHistory {
+  text-align: -webkit-center;
+  text-align: -moz-center;
+}
+.cardBoxEdit {
+  text-align: -webkit-center;
+  text-align: -moz-center;
+}
+  
+
+
+
