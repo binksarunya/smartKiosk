@@ -1,0 +1,104 @@
+<body class="background">
+
+  <button mat-button class="backButton" (click)="back()">
+    <a>
+      <mat-icon>
+        <i class="fa fa-angle-left w3-large"></i>
+      </mat-icon>back</a>
+  </button>
+
+  <h1 class="Title">Patient list</h1>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Seach by ID card" [(ngModel)]="search" name="search">
+    </mat-form-field>
+  </form>
+
+  <mat-card class="cardBoxEdit" *ngIf="stredit">
+    <br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="ID" value="" [(ngModel)]="edituser.ID" name="edituser.ID" disabled="true">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="name" value="" [(ngModel)]="edituser.name" name="edituser.name">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="lastname" value="" [(ngModel)]="edituser.lastname" name="edituser.lastname">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="address" value="" [(ngModel)]="edituser.address" name="edituser.address"></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="gender" value="" [(ngModel)]="edituser.gender" name="edituser.gender" disabled="true">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="blood" value="" [(ngModel)]="edituser.blood" name="edituser.blood" disabled="true">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="accent" (click)="editcancle()">cancle</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="primary" (click)="editsubmit()">save</button>
+    <br>
+    <br>
+  </mat-card>
+
+  <mat-card class="cardBoxHistory" *ngIf="strhistory">
+    <br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="ID card" value="" [(ngModel)]="historyuser.ID" name="historyuser.ID" disabled="true">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="ID name" value="" [(ngModel)]="historyuser.name" name="historyuser.name" disabled="true">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="history" value="" [(ngModel)]="historyuser.history" name="edituser.history"></textarea>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="accent" (click)="historycancle()">cancle</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="primary" (click)="historysubmit()">save</button>
+    <br>
+    <br>
+  </mat-card>
+
+  <mat-card class="cardBox">
+    <div class="example-container">
+      <table class="table">
+        <thead>
+          <tr class="headTitle">
+            <th scope="col">ID Card</th>
+            <th scope="col">Name</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">History</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody class="textinbox">
+          <tr *ngFor="let data of data |filter:search">
+            <td>{{data.ID}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.lastname}}</td>
+            <td>
+              <button mat-button data-toggle="modal" data-target="#myModal" (click)="history(data)">
+                <i class="fa fa-file w3-xlarge"></i>
+              </button>
+            </td>
+            <td>
+              <button mat-button (click)="edit(data)">
+                <i class="fa fa-pencil w3-xlarge"></i>
+              </button>
+            </td>
+            <td>
+              <button mat-button (click)="delete(data)">
+                <i class="fa fa-trash w3-xlarge"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-card>
+
+</body>

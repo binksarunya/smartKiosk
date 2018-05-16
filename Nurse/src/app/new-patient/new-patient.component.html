@@ -1,0 +1,178 @@
+<div class="background">
+
+  <button mat-button class="backButton" (click)="back()">
+    <a>
+      <mat-icon>
+        <i class="fa fa-angle-left w3-large"></i>
+      </mat-icon>back</a>
+  </button>
+
+  <mat-card-content flex class="content" layout-padding>
+    <div flex layout-padding>
+      <!--box1
+      <h1 class="Title">New Patient</h1>
+      <h1 class="Title1">General Information</h1>
+      <hr>-->
+
+      <!--
+      <mat-card-content class="box1-content" layout layout-align="center" layout-wrap>
+        <mat-card flex-gt-sm="25" flex="100">
+
+          <tr>
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="ID Card" [(ngModel)]="patient.id" name="patient.id">
+              </mat-form-field>
+            </form>
+          </tr>
+          <tr>
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Firstname" [(ngModel)]="patient.name" name="patient.name">
+              </mat-form-field>
+            </form>
+          </tr>
+
+          <tr>
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Lastname" [(ngModel)]="patient.lastname" name="patient.lastname">
+              </mat-form-field>
+            </form>
+          </tr>
+          <tr>
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <textarea matInput placeholder="Address" [(ngModel)]="patient.address" name="patient.address"></textarea>
+              </mat-form-field>
+            </form>
+          </tr>
+
+          <tr>
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <mat-select placeholder="Gender" [(ngModel)]="patient.gender" name="patient.gender">
+                  <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                    {{ gender.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </form>
+          </tr>
+          <tr>
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <mat-select placeholder="Blood" [(ngModel)]="patient.blood" name="patient.blood">
+                  <mat-option *ngFor="let blood of bloods" [value]="blood.value">
+                    {{ blood.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </form>
+          </tr>
+          <tr>
+
+          </tr>
+
+        </mat-card>
+      </mat-card-content>-->
+
+      <mat-card>
+        <br>
+        <!-- Title of an Card -->
+        <mat-card-title class="headTitle">
+          New Patient
+        </mat-card-title>
+
+        <mat-card-content>
+          <form>
+            <table>
+              <tr>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="ID Card" [(ngModel)]="patient.id" name="patient.id">
+                </mat-form-field>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field class="demo-full-width">
+                    <input matInput placeholder="Firstname" [(ngModel)]="patient.name" name="patient.name">
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field class="demo-full-width">
+                    <input matInput placeholder="Lastname" [(ngModel)]="patient.lastname" name="patient.lastname">
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <mat-form-field class="demo-full-width">
+                    <textarea matInput placeholder="Address" [(ngModel)]="patient.address" name="patient.address" matTextareaAutosize matAutosizeMinRows="2"
+                      matAutosizeMaxRows="5"></textarea>
+                  </mat-form-field>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <mat-select placeholder="Gender" [(ngModel)]="patient.gender" name="patient.gender">
+                      <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                        {{ gender.viewValue }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </td>
+                <td>
+
+                  <mat-form-field class="example-full-width">
+                    <mat-select placeholder="Blood" [(ngModel)]="patient.blood" name="patient.blood">
+                      <mat-option *ngFor="let blood of bloods" [value]="blood.value">
+                        {{ blood.viewValue }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <mat-form-field class="demo-full-width">
+                    <input matInput placeholder="Email" [(ngModel)]="patient.email" name="patient.email">
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+
+                </td>
+              </tr>
+              <br>
+              <tr>
+                <td colspan="2" class="content-center">
+                  <button mat-raised-button (click)="cancle()">Cancle</button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <button mat-raised-button color="primary" (click)="addpatient()">Add Patient</button>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </mat-card-content>
+        <font color="{{color}}">{{str}}</font>
+        <br>
+        <br>
+      </mat-card>
+
+      <br>
+      <br>
+
+      <!--
+      <mat-card-content flex class="content" layout-padding>
+        <font color="{{color}}">{{str}}</font>
+        <div class="button">
+          <button mat-button class="button button1" (click)="cancle()">Cancle</button>
+          <button mat-button class="button button2" (click)="addpatient()">Add Patient</button>
+        </div>
+      </mat-card-content>-->
+
+
+    </div>
