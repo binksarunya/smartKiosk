@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+  max-width: 700px;
+}
+.panel-body {
+  text-align: -webkit-center;
+  text-align: -moz-center;
+  font-family: 'Prompt';
+}
+.panel-heading {
+  font-family: 'Prompt';
+  font-size: 25px;
+}
+/*button*/
+
+.button {
+  font-family: 'Prompt';
+  align-items: center;
+  text-align: center;
+}
+
+.backButton {
+  font-size: 20px;
+  text-align: left;
+  margin-top: 4%;
+  font-family: 'Prompt';
+  margin-left: 0%;
+}
+
+  
+  

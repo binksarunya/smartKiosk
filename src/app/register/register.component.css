@@ -17,6 +17,7 @@
 
 .example-full-width {
     width: 100%;
+    max-width: 100%;
 }
 
 .example-form {
@@ -26,13 +27,13 @@
 }
 
 .button1 {
-    font-family: Bahnschrift;
+    font-family: 'Prompt';
     font-size: 20px;
 }
 
 .title {
-    font-family: Bahnschrift;
-    font-size: 60px;
+    font-family: 'Prompt';
+    font-size: 40px;
     text-align: -webkit-center;
     text-align: -moz-center;
 }
@@ -41,5 +42,16 @@
  .Footer {
     text-align: -webkit-center;
     text-align: -moz-center;
+    font-family: 'Prompt';
 }
-    
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    font-family: 'Prompt';
+    margin: 5em auto;
+}
+
+.panel-heading {
+    font-size: 20px;
+}

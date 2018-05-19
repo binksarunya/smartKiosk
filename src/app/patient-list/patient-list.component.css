@@ -1,7 +1,9 @@
 
-  h1.Title {
-    font-family: 'Kanit';
-    font-size: 30px;      
+  .Title {
+    font-family: 'Prompt';
+    font-size: 25px;  
+    margin-left: 0%;
+     
   }
 
   h1,
@@ -10,7 +12,7 @@
   h4,
   h5,
   h6 {
-      font-family: 'Kanit';
+      font-family: 'Prompt';
   }
   
   .w3-row-padding img {
@@ -39,10 +41,9 @@
   .backButton {
     font-size: 20px;
     text-align: left;
-    margin-left: 10%;
+    margin-left: 0%;
     margin-top: 4%;
-    font-family: 'Kanit';
-    
+    font-family: 'Prompt';
   }
 
   .fa fa-angle-left w3-xlarge {
@@ -79,7 +80,7 @@
   .mat-header-cell {
     font-size: 18px;
     font-weight: bold;
-    font-family: 'Kanit';
+    font-family: 'Prompt';
 }
 
 /* box table space of top */ 
@@ -88,16 +89,15 @@
 
 }
 
-.Title {
-    margin-left: 20%;
-}
+
 
 /*input feild*/
 .example-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
-    margin-left: 65%;
+    margin-left: 82%;
+
 }
   
 .example-full-width {
@@ -105,7 +105,7 @@
 }
 
 .table {
-  font-family: 'Kanit';
+  font-family: 'Prompt';
   font-size: 20px;
 }
 
@@ -131,5 +131,27 @@
 }
   
 
+/* --------------------------------------------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: 'Prompt';
+}
 
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
 
+tr:hover {
+  background-color:#f5f5f5;
+}
+
+body {
+  font-family: 'Prompt';
+}
+
+.btnSet {
+  font-family: 'Prompt';
+}

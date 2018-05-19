@@ -1,0 +1,57 @@
+body {
+  background-image: url(" ../../assets/picture/background.gif");
+  margin-top: 0%;
+  height: 100%;
+}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      font-family: 'Prompt';
+  }
+  
+  .w3-row-padding img {
+      /*margin-bottom: 20px;*/
+  }
+  
+  .w3-sidebar {
+      /*width: 150px;*/
+      /*background: #cce6ff;*/
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      overflow: auto;
+      top: 0px;
+  }
+
+  
+  .fa fa-angle-left w3-xlarge {
+    text-align: center;
+  }
+
+.Btn {
+  /*margin: 10px 50px;*/
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+ margin-top: 17%;
+}
+
+.b1 {
+  padding: 30px 80px;
+  display: inline-block;
+  font-family: 'Prompt';
+  font-size: 30px;
+  margin: 20px;
+}
+
+
+.angular-logo {
+  height: 150px;
+  width: 150px;
+}
+
+
+
