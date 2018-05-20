@@ -1,105 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="background">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+  <button mat-button class="backButton" (click)="back()">
+    <a class="setBackButton">
+      <mat-icon>
+        <i class="fa fa-angle-left w3-large"></i>
+      </mat-icon>back</a>
+  </button>
 
-<body>
-  <div class="background">
-
-    <button mat-button class="backButton" (click)="back()">
-      <a>
-        <mat-icon>
-          <i class="fa fa-angle-left w3-large"></i>
-        </mat-icon>back</a>
-    </button>
-
-    <div class="container">
-      <div class="panel panel-info">
-        <div class="panel-heading">New Patient</div>
-        <div class="panel-body">
-          <table class="setContent">
-            <tr>
+  <div class="container">
+    <div class="panel panel-info">
+      <div class="panel-heading">New Patient
+        <i class="material-icons">
+          person_add
+        </i>
+      </div>
+      <div class="panel-body">
+        <table class="setContent">
+          <tr>
+            <mat-form-field class="demo-full-width">
+              <input matInput placeholder="ID Card" [(ngModel)]="patient.id" name="patient.id">
+            </mat-form-field>
+          </tr>
+          <tr>
+            <td>
               <mat-form-field class="demo-full-width">
-                <input matInput placeholder="ID Card" [(ngModel)]="patient.id" name="patient.id">
+                <input matInput placeholder="Firstname" [(ngModel)]="patient.name" name="patient.name">
               </mat-form-field>
-            </tr>
-            <tr>
-              <td>
-                <mat-form-field class="demo-full-width">
-                  <input matInput placeholder="Firstname" [(ngModel)]="patient.name" name="patient.name">
-                </mat-form-field>
-              </td>
-              <td>
-                <mat-form-field class="demo-full-width">
-                  <input matInput placeholder="Lastname" [(ngModel)]="patient.lastname" name="patient.lastname">
-                </mat-form-field>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <mat-form-field class="demo-full-width">
-                  <textarea matInput placeholder="Address" [(ngModel)]="patient.address" name="patient.address" matTextareaAutosize matAutosizeMinRows="2"
-                    matAutosizeMaxRows="5"></textarea>
-                </mat-form-field>
-              </td>
-            </tr>
+            </td>
+            <td>
+              <mat-form-field class="demo-full-width">
+                <input matInput placeholder="Lastname" [(ngModel)]="patient.lastname" name="patient.lastname">
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <mat-form-field class="demo-full-width">
+                <textarea matInput placeholder="Address" [(ngModel)]="patient.address" name="patient.address" matTextareaAutosize matAutosizeMinRows="2"
+                  matAutosizeMaxRows="5"></textarea>
+              </mat-form-field>
+            </td>
+          </tr>
 
-            <tr>
-              <td>
-                <mat-form-field class="example-full-width">
-                  <mat-select placeholder="Gender" [(ngModel)]="patient.gender" name="patient.gender">
-                    <mat-option *ngFor="let gender of genders" [value]="gender.value">
-                      {{ gender.viewValue }}
-                    </mat-option>
-                  </mat-select>
-                </mat-form-field>
-              </td>
-              <td>
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-select placeholder="Gender" [(ngModel)]="patient.gender" name="patient.gender">
+                  <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                    {{ gender.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+            <td>
 
-                <mat-form-field class="example-full-width">
-                  <mat-select placeholder="Blood" [(ngModel)]="patient.blood" name="patient.blood">
-                    <mat-option *ngFor="let blood of bloods" [value]="blood.value">
-                      {{ blood.viewValue }}
-                    </mat-option>
-                  </mat-select>
-                </mat-form-field>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <mat-form-field class="demo-full-width">
-                  <input matInput placeholder="Email" [(ngModel)]="patient.email" name="patient.email">
-                </mat-form-field>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-              </td>
-            </tr>
-            <br>
-            <tr>
-              <td  class="content-center">
-                <button class="button" mat-raised-button (click)="cancle()">Cancle</button>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button class="button" mat-raised-button color="primary" (click)="addpatient()">Add Patient</button>
-              </td>
-            </tr>
-          </table>
+              <mat-form-field class="example-full-width">
+                <mat-select placeholder="Blood" [(ngModel)]="patient.blood" name="patient.blood">
+                  <mat-option *ngFor="let blood of bloods" [value]="blood.value">
+                    {{ blood.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <mat-form-field class="demo-full-width">
+                <input matInput placeholder="Email" [(ngModel)]="patient.email" name="patient.email">
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+            </td>
+          </tr>
           <br>
-          <font color="{{color}}">{{str}}</font>
-          <br>
+          <!--<tr>
+            <td class="content-center">
+              <button class="button" mat-raised-button (click)="cancle()">Cancle</button>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="button" mat-raised-button color="primary" (click)="addpatient()">Add Patient</button>
+            </td>
+          </tr>-->
 
-        </div>
+          <tr>
+            <div class="setFooterButton">
+              <button class="button" mat-raised-button (click)="cancle()">Cancle</button>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="button" mat-raised-button color="primary" (click)="addpatient()">Add Patient</button>
+            </div>
+          </tr>
+
+        </table>
+        <br>
+        <font color="{{color}}">{{str}}</font>
+        <br>
+
       </div>
     </div>
-
   </div>
-</body>
 
-</html>
+</div>

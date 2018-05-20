@@ -1,132 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="container">
+  <div class="panel panel-info">
+    <div class="panel-heading">Register</div>
+    <div class="panel-body">
+      <form class="example-form">
+        <tr>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="IDENTITY CARD" value="" [(ngModel)]="registerID" name="registerID">
+          </mat-form-field>
+        </tr>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+        <tr>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="PASSWORD" value="" [(ngModel)]="registerPass" name="registerPass">
+          </mat-form-field>
+        </tr>
 
-<body>
-  <div class="container">
-    <div class="panel panel-info">
-      <div class="panel-heading">Register</div>
-      <div class="panel-body">
-        <form class="example-form">
-          <tr>
-            <mat-form-field class="example-full-width">
-              <input matInput placeholder="IDENTITTY CARD" value="" [(ngModel)]="registerID" name="registerID">
-            </mat-form-field>
-          </tr>
+        <tr>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="RE-ENTER PASSWORD" value="" [(ngModel)]="registerRepass" name="registerRepass">
+          </mat-form-field>
+        </tr>
 
-          <tr>
-            <mat-form-field class="example-full-width">
-              <input matInput placeholder="PASSWORD" value="" [(ngModel)]="registerPass" name="registerPass">
-            </mat-form-field>
-          </tr>
+        <tr>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="FIRSTNAME" value="" [(ngModel)]="registerName" name="registerName">
+          </mat-form-field>
+        </tr>
 
-          <tr>
-            <mat-form-field class="example-full-width">
-              <input matInput placeholder="RE-ENTER PASSWORD" value="" [(ngModel)]="registerRepass" name="registerRepass">
-            </mat-form-field>
-          </tr>
+        <tr>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="LASTNAME" value="" [(ngModel)]="registerLastname" name="registerLastname">
+          </mat-form-field>
+        </tr>
 
-          <tr>
-            <mat-form-field class="example-full-width">
-              <input matInput placeholder="FIRSTNAME" value="" [(ngModel)]="registerName" name="registerName">
-            </mat-form-field>
-          </tr>
-
-          <tr>
-            <mat-form-field class="example-full-width">
-              <input matInput placeholder="LASTNAME" value="" [(ngModel)]="registerLastname" name="registerLastname">
-            </mat-form-field>
-          </tr>
-
-          <tr>
-            <mat-form-field class="example-full-width">
-              <input matInput placeholder="TEL." value="" [(ngModel)]="registerTel" name="registerTel">
-            </mat-form-field>
-          </tr>
-        </form>
+        <tr>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="TEL." value="" [(ngModel)]="registerTel" name="registerTel">
+          </mat-form-field>
+        </tr>
+      </form>
+      <br>
+      <br>
+      <div class="Footer">
+        <button class="button1" mat-raised-button (click)="gologin()">Back</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button1" mat-raised-button (click)="registerNurse()" color="primary">Sign up</button>
         <br>
         <br>
-        <div class="Footer">
-          <button class="button1" mat-raised-button (click)="gologin()">Back</button>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <button class="button1" mat-raised-button (click)="registerNurse()" color="primary">Sign up</button>
-          <br>
-          <br>
-          <font color="{{color}}">{{status}}</font>
-        </div>
+        <font color="{{color}}">{{status}}</font>
       </div>
     </div>
   </div>
-
-
-
-
-  <!--<p class="title">
-  REGISTER</p>--
-<form class="example-form">
-  <tr>
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="ID" value="" [(ngModel)]="registerID" name="registerID">
-    </mat-form-field>
-  </tr>
-
-  <tr>
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="PASSWORD" value="" [(ngModel)]="registerPass" name="registerPass">
-    </mat-form-field>
-  </tr>
-
-  <tr>
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="RE-ENTER PASSWORD" value="" [(ngModel)]="registerRepass" name="registerRepass">
-    </mat-form-field>
-  </tr>
-
-  <tr>
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="FIRSTNAME" value="" [(ngModel)]="registerName" name="registerName">
-    </mat-form-field>
-  </tr>
-
-  <tr>
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="LASTNAME" value="" [(ngModel)]="registerLastname" name="registerLastname">
-    </mat-form-field>
-  </tr>
-
-  <tr>
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="TEL." value="" [(ngModel)]="registerTel" name="registerTel">
-    </mat-form-field>
-  </tr>
-
-
-
-</form>
-
-
-
-<br>
-<br>
-
-<!-- STATUS WENT YOU REGISTER 
-<font color="{{color}}">{{status}}</font>--
-
-<div class="Footer">
-  <button class="button1" mat-raised-button (click)="gologin()">Back</button>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <button class="button1" mat-raised-button (click)="registerNurse()" color="primary">Sign up</button>
-  <!-- <input type="submit" name="" value="Sign up" (click)="registerNurse()"> --
-
-  <br><br>
-  <!-- STATUS WENT YOU REGISTER --
-  <font color="{{color}}">{{status}}</font>
-
-</div>-->
+</div>
