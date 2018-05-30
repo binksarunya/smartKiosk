@@ -99,13 +99,6 @@
     margin-left: 70%;
 
 }
-  
-.example-full-width {
-  width: 20%;
-  font-family: 'Prompt';
-  font-size: 16px;
- 
-}
 
 .table {
   font-family: 'Prompt';
@@ -174,6 +167,13 @@ body {
 }
 
 .setSearch {
-  text-align: right;
+  text-align: center;
+}
+
+.example-full-width {
+  width: 600px;
+  font-family: 'Prompt';
+  font-size: 16px;
+  margin: 10px 10px;
 }
 

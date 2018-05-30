@@ -15,8 +15,11 @@
 
       <div class="setSearch">
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Search by ID card" [(ngModel)]="search" name="search">
+          <input matInput placeholder="Search" [(ngModel)]="search" name="search">
         </mat-form-field>
+        <mat-icon>
+          <i class="fa fa-search w3-medium"></i>
+        </mat-icon>
       </div>
     </div>
 
@@ -60,7 +63,7 @@
           <input matInput placeholder="ID name" value="" [(ngModel)]="historyuser.name" name="historyuser.name" disabled="true">
         </mat-form-field>
         <mat-form-field class="example-full-width">
-          <textarea matInput placeholder="history" value="" [(ngModel)]="historyuser.history" name="edituser.history"></textarea>
+          <textarea matInput rows="8" cols="40" placeholder="history" value="" [(ngModel)]="historyuser.history" name="edituser.history"></textarea>
         </mat-form-field>
         <br>
         <button class="btnSet" mat-raised-button color="accent" (click)="historycancle()">cancle</button>

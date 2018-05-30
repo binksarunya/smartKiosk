@@ -3,7 +3,7 @@
 
 body{
     background-image: url(" ./assets/picture/hospital2.jpg");
-    background-repeat :no-repeat;
+    background-repeat :repeat;
     background-size: 100%;
     
 }
