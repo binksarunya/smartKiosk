@@ -46,11 +46,11 @@ export class RegisterComponent implements OnInit {
     //console.log("click");
     if (this.registerID == null && this.registerPass == null && this.registerName == null && this.registerLastname == null && this.registerTel == null) {
       this.color = "red";
-      this.status = "invalid input";
+      this.status = "Please fill in all information!";
     } else {
       if (this.registerPass != this.registerRepass) {
         this.color = "red";
-        this.status = "pass and repass not match";
+        this.status = "password and re-password not match!";
       } else {
         this.user = new User();
         this.user.id = this.registerID;
@@ -74,9 +74,6 @@ export class RegisterComponent implements OnInit {
               this.registerName = null;
               this.registerLastname = null;
               this.registerTel = null;
-
-
-
 
             } else {
               this.color = "red";

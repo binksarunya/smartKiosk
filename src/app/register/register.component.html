@@ -1,7 +1,10 @@
-<div class="container">
-  <div class="panel panel-info">
-    <div class="panel-heading">Register</div>
-    <div class="panel-body">
+<div class="" style="background-color:rgba(245, 241, 241, 0.493);">
+
+  <img class="img">
+
+  <div class="loginBox">
+    <div class="formContent">
+      <h2>Register</h2>
       <form class="example-form">
         <tr>
           <mat-form-field class="example-full-width">
@@ -11,44 +14,42 @@
 
         <tr>
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="PASSWORD" value="" [(ngModel)]="registerPass" name="registerPass">
+            <input matInput placeholder="PASSWORD" value="" [(ngModel)]="registerPass" name="registerPass" type="password">
           </mat-form-field>
         </tr>
-
         <tr>
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="RE-ENTER PASSWORD" value="" [(ngModel)]="registerRepass" name="registerRepass">
+            <input matInput placeholder="RE-PASSWORD" value="" [(ngModel)]="registerRepass" name="registerRepass" type="password">
           </mat-form-field>
         </tr>
-
         <tr>
           <mat-form-field class="example-full-width">
             <input matInput placeholder="FIRSTNAME" value="" [(ngModel)]="registerName" name="registerName">
           </mat-form-field>
         </tr>
-
         <tr>
           <mat-form-field class="example-full-width">
             <input matInput placeholder="LASTNAME" value="" [(ngModel)]="registerLastname" name="registerLastname">
           </mat-form-field>
         </tr>
-
         <tr>
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="TEL." value="" [(ngModel)]="registerTel" name="registerTel">
+            <input matInput placeholder="TEL." value="" [(ngModel)]="registerTel" name=registerTel>
           </mat-form-field>
         </tr>
+        <tr>
+          <font color="{{color}}">{{status}}</font>
+        </tr>
+        <div class="buttonDown">
+          <br>
+          <button mat-raised-button color="warn" (click)="gologin()">Cancle</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button mat-raised-button color="primary" (click)="registerNurse()">Register</button>
+        </div>
+
       </form>
-      <br>
-      <br>
-      <div class="Footer">
-        <button class="button1" mat-raised-button (click)="gologin()">Back</button>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button class="button1" mat-raised-button (click)="registerNurse()" color="primary">Sign up</button>
-        <br>
-        <br>
-        <font color="{{color}}">{{status}}</font>
-      </div>
     </div>
   </div>
+
 </div>
+
