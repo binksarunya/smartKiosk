@@ -39,6 +39,8 @@ export class PatientListComponent implements OnInit {
   edit(user:any){
     this.edituser=user;
     this.stredit=true;
+    this.strhistory=false;
+    
     //console.log(this.edituser);
   }
   editcancle(){
@@ -56,6 +58,7 @@ export class PatientListComponent implements OnInit {
   }
 
   history(user:any){
+    this.stredit=false;
     this.strhistory=true;
     this.historyuser=user;
     //console.log(this.historyuser);
